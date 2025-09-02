@@ -16,7 +16,7 @@ export default function About() {
             natus sapiente? Lorem ipsum dolor sit amet, consectetur adipisicing
             elit. Nostrum aliquam possimus ut a esse optio explicabo earum
             facere. Exercitationem repudiandae totam sapiente magni quo magnam
-            facere quisquam placeat rem iusto.
+            facere quisquam placeat rem iusto. ewcwycwvcyiv
           </p>
         </div>
       </div>

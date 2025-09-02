@@ -1,19 +1,11 @@
-import { SendHorizonal, Twitter } from "lucide-react";
+import About from "@/components/layout/about";
+import HomePage from "@/components/layout/home";
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-between items-center">
-      <div>
-        <a
-          href=""
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-black"
-        >
-          <SendHorizonal />
-        </a>
-        euaigiwfuukv
-      </div>
+    <div className="mt-20 flex flex-col justify-between gap-15 px-4 md:px-20">
+      <HomePage />
+      <About />
     </div>
   );
 }

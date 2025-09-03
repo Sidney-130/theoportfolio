@@ -4,9 +4,9 @@ import { SkillCard } from "./SkillCard";
 export default function About() {
   return (
     <div>
-      <div className="flex flex-col justify-center items-center text-center">
+      <div className="flex flex-col justify-center items-center text-center pb-15">
         <div>
-          <h1 className="text-2xl font-semibold bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent">
+          <h1 className="pb-9 text-2xl font-semibold bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent">
             About Me
           </h1>
           <p>
@@ -21,11 +21,14 @@ export default function About() {
         </div>
       </div>
       <div>
-        <section className="mx-auto max-w-6xl px-4 py-15">
-          <h1 className="pb-9 text-2xl font-semibold bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent">
-            About Me
-          </h1>
-          <div className="grid gap-5 grid-cols-1 md:grid-cols-3">
+        <section className="bg-zinc-50 md:pt-30 mx-auto max-w-6xl">
+          <div className="bg-white/90">
+            {" "}
+            <h1 className="text-center pb-9 text-2xl font-semibold bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent">
+              Skills
+            </h1>
+          </div>
+          <div className=" px-4 grid gap-5 grid-cols-1 md:grid-cols-3">
             {SKILL_SETS.map((set) => (
               <SkillCard key={set.id} set={set} />
             ))}

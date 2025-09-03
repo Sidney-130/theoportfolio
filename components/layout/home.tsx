@@ -26,7 +26,7 @@ export default function HomePage() {
         </div>
         <div className="justify-center items-center text-center">
           <p>
-            <span className="text-green-600">
+            <span className="text-green-800">
               Social Media/Content Manager & Technical writer
             </span>{" "}
             with 2+ years in crypto communications. Experienced in translating
@@ -38,8 +38,11 @@ export default function HomePage() {
             async startup environments.
           </p>
         </div>
-        <Button className="w-full mt-7">View my Resume</Button>
-        <div className="pt-2 flex justify-between text-center items-center text-xl">
+        <div>
+          {" "}
+          <Button className="w-full mt-7">View my Resume</Button>
+        </div>
+        <div className="pt-2 flex justify-between md:justify-center text-center items-center text-xl md:gap-7">
           <div className="space-y-2">
             <p className="font-bold">10k+</p>{" "}
             <p className="text-sm">

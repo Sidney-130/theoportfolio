@@ -39,7 +39,15 @@ export default function AnimatedText() {
   );
 }
 
-export function AnimatedCard({ children }: { children: React.ReactNode }) {
+export function AnimatedCard({
+  children,
+  gradientFrom,
+  gradientTo,
+}: {
+  children: React.ReactNode;
+  gradientFrom: string;
+  gradientTo: string;
+}) {
   return (
     <motion.div
       layout
@@ -47,7 +55,22 @@ export function AnimatedCard({ children }: { children: React.ReactNode }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ type: "spring", stiffness: 120, damping: 16 }}
+      className="group relative overflow-hidden rounded-2xl border border-zinc-200 bg-white p-5 shadow-md hover:shadow-lg"
     >
+      {/* 🔥 Animated gradient bar moved here */}
+      <motion.div
+        className={`absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r ${gradientFrom} ${gradientTo}`}
+        animate={{
+          backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+          filter: ["brightness(100%)", "brightness(120%)", "brightness(100%)"],
+        }}
+        transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+        style={{
+          backgroundSize: "400% 400%", // 👈 make the gradient larger
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+
       {children}
     </motion.div>
   );

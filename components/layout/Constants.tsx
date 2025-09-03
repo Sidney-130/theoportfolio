@@ -24,8 +24,8 @@ export const SKILL_SETS: SkillSet[] = [
   {
     id: "social-media",
     title: "Social Media Strategy",
-    gradientFrom: "from-sky-500",
-    gradientTo: "to-blue-600",
+    gradientFrom: "from-emerald-500",
+    gradientTo: "to-green-300",
     bullets: [
       "Creating and executing social media campaigns to build brand awareness.",
       "Developing and managing an organization's digital presence across platforms like X (formerly Twitter), LinkedIn, and YouTube.",
@@ -38,8 +38,8 @@ export const SKILL_SETS: SkillSet[] = [
   {
     id: "partnerships",
     title: "Partnerships & Business Development",
-    gradientFrom: "from-fuchsia-500",
-    gradientTo: "to-purple-600",
+    gradientFrom: "from-emerald-300",
+    gradientTo: "to-emerald-600",
     bullets: [
       "Identifying and securing strategic partnerships that align with company goals.",
       "Developing and implementing partnership strategies to drive growth.",
@@ -52,8 +52,8 @@ export const SKILL_SETS: SkillSet[] = [
   {
     id: "technical-writing",
     title: "Technical Writing",
-    gradientFrom: "from-amber-500",
-    gradientTo: "to-orange-600",
+    gradientFrom: "from-emerald-800",
+    gradientTo: "to-emerald-200",
     bullets: [
       "Creating user manuals, how-to guides, and other supporting documents.",
       "Simplifying complex, technical information for non-technical audiences.",
@@ -66,8 +66,8 @@ export const SKILL_SETS: SkillSet[] = [
   {
     id: "brand-voice",
     title: "Brand Voice Development",
-    gradientFrom: "from-pink-500",
-    gradientTo: "to-red-600",
+    gradientFrom: "from-green-500",
+    gradientTo: "to-emerald-600",
     bullets: [
       "Defining a brand's unique tone and personality.",
       "Ensuring consistency in communication across all channels (e.g., website, social media, emails).",
@@ -80,8 +80,8 @@ export const SKILL_SETS: SkillSet[] = [
   {
     id: "community-growth",
     title: "Community Growth Strategy",
-    gradientFrom: "from-teal-500",
-    gradientTo: "to-cyan-600",
+    gradientFrom: "from-green-500",
+    gradientTo: "to-emerald-600",
     bullets: [
       "Defining and understanding the target audience.",
       "Fostering community engagement by providing opportunities for connection and collaboration.",

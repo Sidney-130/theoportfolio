@@ -18,7 +18,7 @@ export default function HomePage() {
           </a>
         </div>
         <div>
-          <h2 className="text-green-600 text-lg"> Hello, I'm Theo</h2>
+          <h2 className="text-green-600 text-lg"> Hello, I&apos;m Theo</h2>
         </div>
         <div>
           {" "}

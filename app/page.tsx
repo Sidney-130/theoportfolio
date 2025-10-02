@@ -33,7 +33,7 @@ export default function Portfolio() {
 
                   {/* Uncomment and use this when you add your image */}
                   <Image
-                    src="/theoimg.jpg"
+                    src="/theoimage.jpg"
                     alt="Web3Theo"
                     fill
                     className="w-full h-full object-cover"

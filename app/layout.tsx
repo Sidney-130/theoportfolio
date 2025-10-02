@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
+import "aos/dist/aos.css";
 
 // ✅ Import DM Sans with className only
 const dmSans = DM_Sans({
@@ -10,8 +11,17 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Theo's Portfolio",
-  description: "Technical Writer, Social Media/Content Manager.",
+  title: "Web3Theo | Content Manager & Technical Writer",
+  description:
+    "Social Media/Content Manager & Technical Writer with 2+ years in crypto communications. Specialized in Web3, Solana, and blockchain content.",
+  keywords: [
+    "Web3",
+    "Content Manager",
+    "Technical Writer",
+    "Solana",
+    "Crypto",
+    "Blockchain",
+  ],
 };
 
 export default function RootLayout({
@@ -20,8 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      {/* ✅ apply font globally with className */}
+    <html lang="en" className="scroll-smooth">
       <body className={`${dmSans.className} antialiased`}>
         <Navbar />
         {children}

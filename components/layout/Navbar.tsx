@@ -1,72 +1,117 @@
 "use client";
 
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Button } from "../ui/button";
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { href: "#home", label: "Home" },
+    { href: "#about", label: "About" },
+    { href: "#projects", label: "Projects" },
+    { href: "#experience", label: "Experience" },
+    { href: "#contact", label: "Contact" },
+  ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3 md:py-4">
-        <div className="text-2xl font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
-          Theo
-        </div>
-        <div className="hidden md:block"></div>
-        <div className="md:hidden">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-md ${
+        isScrolled ? "bg-white/80 backdrop-blur-md shadow-md" : ""
+      }`}
+    >
+      <div className="max-w-6xl mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <a
+            href="#home"
+            className="text-xl md:text-2xl font-bold bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent"
+          >
+            Web3Theo
+          </a>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="hover:text-green-600 transition-colors text-sm"
+              >
+                {link.label}
+              </a>
+            ))}
+            <Button size="sm">Resume</Button>
+          </div>
+
+          {/* Mobile Menu Button */}
           <button
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-2 hover:text-green-600"
             aria-label="Toggle menu"
           >
-            {menuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMobileMenuOpen ? (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
           </button>
         </div>
-      </div>
-      {menuOpen && (
-        <>
-          <div
-            className="fixed inset-0 bg-black/5"
-            onClick={() => setMenuOpen(false)}
-          />
-          <div className="absolute top-full left-0 w-full bg-white shadow-lg z-50">
-            <ul className="flex flex-col space-y-4 px-6 py-6 text-lg">
-              <li>
-                <a href="#home" onClick={() => setMenuOpen(false)}>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#about" onClick={() => setMenuOpen(false)}>
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#projects" onClick={() => setMenuOpen(false)}>
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a href="#services" onClick={() => setMenuOpen(false)}>
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#contact" onClick={() => setMenuOpen(false)}>
-                  Contact Me
-                </a>
-              </li>
-              <li>
-                <button
-                  className="w-full bg-green-500 text-white py-2 rounded-xl hover:bg-green-600 transition"
-                  onClick={() => setMenuOpen(false)}
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden mt-4 pb-4 border-t border-zinc-200">
+            <div className="flex flex-col gap-3 pt-4">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="hover:text-green-600 transition-colors text-sm font-medium py-2 px-2"
                 >
-                  Hire Me
-                </button>
-              </li>
-            </ul>
+                  {link.label}
+                </a>
+              ))}
+              <Button size="sm" className="w-full mt-2">
+                Resume
+              </Button>
+            </div>
           </div>
-        </>
-      )}
+        )}
+      </div>
     </nav>
   );
 }

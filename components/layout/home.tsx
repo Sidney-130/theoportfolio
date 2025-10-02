@@ -2,13 +2,18 @@ import { Button } from "../ui/button";
 import AnimatedText from "../animate/animate";
 import { BsDiscord, BsTelegram, BsTwitterX } from "react-icons/bs";
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <div className="mt-5 flex flex-col gap-5">
+    <div className="md:mt-5 mt-8 flex flex-col gap-5">
       <div className="flex flex-col justify-between gap-5">
-        <div className="flex justify-start items-center gap-3">
-          <a href="/" target="_blank" rel="noopener noreferrer">
-            <BsTwitterX size={24} />
+        {/* <div className="flex justify-start items-center gap-3">
+          <a
+            href="/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-500 rounded-full"
+          >
+            <BsTwitterX size={24} className="m-2" />
           </a>
           <a href="/" target="_blank" rel="noopener noreferrer">
             <BsDiscord size={24} />
@@ -16,31 +21,34 @@ export default function HomePage() {
           <a href="/" target="_blank" rel="noopener noreferrer">
             <BsTelegram size={24} />
           </a>
-        </div>
+        </div> */}
         <div>
-          <h2 className="text-green-600 text-lg"> Hello, I&apos;m Theo</h2>
+          <h2 className="text-green-800 text-lg"> Hello, I&apos;m Theo</h2>
         </div>
         <div>
           {" "}
           <AnimatedText />
         </div>
-        <div className="justify-center items-center text-center">
+        <div className="justify-center">
           <p>
-            <span className="text-green-800">
-              Social Media/Content Manager & Technical writer
+            <span className="text-green-800 font-semibold text-left">
+              Social Media/Content Manager and Technical writer
             </span>{" "}
             with 2+ years in crypto communications. Experienced in translating
             complex topics like Solana, validators, MEV, and protocol
-            infrastructure into clear, engaging content. Grew social channels to
-            10k+ followers and drove 150%+ engagement growth through strategic
-            content and community-focused campaigns. Skilled in editing across
-            voices, running social independently, and thriving in fast-moving,
-            async startup environments.
+            infrastructure into clear, engaging content. Grew social channels to{" "}
+            <span className="text-green-700 font-semibold">10k+ </span>{" "}
+            followers and drove{" "}
+            <span className="text-green-700 font-semibold">150%+ </span>{" "}
+            engagement growth through strategic content and community-focused
+            campaigns. Skilled in editing across voices, running social
+            platforms independently, and thriving in fast-moving, async startup
+            environments.
           </p>
         </div>
         <div>
           {" "}
-          <Button className="w-full mt-7">View my Resume</Button>
+          <Button className="w-full mt-7 mb-3">View my Resume</Button>
         </div>
         <div className="pt-2 flex justify-between md:justify-center text-center items-center text-xl md:gap-7">
           <div className="space-y-2">

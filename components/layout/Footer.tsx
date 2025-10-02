@@ -1,6 +1,6 @@
 "use client";
 
-import { BsTwitterX, BsTelegram, BsDiscord, BsEnvelope } from "react-icons/bs";
+import { BsTwitterX, BsTelegram, BsEnvelope } from "react-icons/bs";
 import { SOCIAL_LINKS } from "./Constants";
 
 export default function Footer() {

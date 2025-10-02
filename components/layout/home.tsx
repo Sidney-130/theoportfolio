@@ -1,6 +1,5 @@
 import { Button } from "../ui/button";
 import AnimatedText from "../animate/animate";
-import { BsDiscord, BsTelegram, BsTwitterX } from "react-icons/bs";
 
 export default function Home() {
   return (

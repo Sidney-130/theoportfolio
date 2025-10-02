@@ -21,11 +21,12 @@ export default function Contact() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent mb-4">
-            Let's Work Together
+            Let&apos;s Work Together
           </h2>
           <p className="max-w-2xl mx-auto text-sm md:text-base">
             Looking for a content manager, technical writer, or community
-            strategist? Let's discuss how I can help grow your Web3 project.
+            strategist? Let&apos;s discuss how I can help grow your Web3
+            project.
           </p>
         </div>
 

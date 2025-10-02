@@ -6,8 +6,9 @@ import Experience from "@/components/layout/Experience";
 import Communities from "@/components/layout/Communities";
 import Footer from "@/components/layout/Footer";
 import Contact from "@/components/Contact";
-import Home from "@/components/layout/Home";
-import About from "@/components/layout/About";
+import Home from "@/components/layout/home";
+import About from "@/components/layout/about";
+import Image from "next/image";
 
 export default function Portfolio() {
   return (
@@ -31,9 +32,10 @@ export default function Portfolio() {
                   {/* Placeholder for your image */}
 
                   {/* Uncomment and use this when you add your image */}
-                  <img
+                  <Image
                     src="/theoimg.jpg"
                     alt="Web3Theo"
+                    fill
                     className="w-full h-full object-cover"
                   />
                 </div>

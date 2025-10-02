@@ -23,19 +23,19 @@ export default function About() {
             About Me
           </h1>
           <p className="leading-relaxed text-sm md:text-base">
-            I'm a Social Media/Content Manager & Technical Writer with 2+ years
-            of experience in crypto communications. I specialize in translating
-            complex topics like Solana, validators, MEV, and protocol
-            infrastructure into clear, engaging content that resonates with
-            diverse audiences, from developers to retail users.
+            I&apos;m a Social Media/Content Manager & Technical Writer with 2+
+            years of experience in crypto communications. I specialize in
+            translating complex topics like Solana, validators, MEV, and
+            protocol infrastructure into clear, engaging content that resonates
+            with diverse audiences, from developers to retail users.
           </p>
           <p className="leading-relaxed mt-4 text-sm md:text-base">
             My expertise lies in growing social channels, crafting technical
-            documentation, and building vibrant communities. I've successfully
-            grown accounts to 10k+ followers and achieved 150%+ engagement
-            growth through strategic content and authentic community engagement.
-            I thrive in fast-moving, async startup environments where judgment,
-            speed, and clarity matter most.
+            documentation, and building vibrant communities. I&apos;ve
+            successfully grown accounts to 10k+ followers and achieved 150%+
+            engagement growth through strategic content and authentic community
+            engagement. I thrive in fast-moving, async startup environments
+            where judgment, speed, and clarity matter most.
           </p>
         </div>
       </div>
